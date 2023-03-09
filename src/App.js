@@ -9,6 +9,7 @@ import Nav from "./Navigators/Nav";
 function App() {
   return (
     <R>
+
     <div className="App">
       <Nav/>
       <div className='rom-app'>
