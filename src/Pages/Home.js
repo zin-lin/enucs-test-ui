@@ -44,9 +44,9 @@ export default function Home (){
                         <p className='enucs' >{'{'}ENU<span className='red'>CS</span>{'}'}</p>
                         <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
                             ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
-                        <button className='redx shRed' style={{width:'200px'}}>Join Us Now</button>
+                        <button className='redx shRed' style={{width:'200px',padding:'10px'}}>Join Us Now</button>
                         <br/><br/>
-                            <button className='orangex shOrange' style={{width:'200px'}} >Join Napier</button>
+                            <button className='orangex shOrange' style={{width:'200px',padding:'10px'}} >Join Napier</button>
                         </div>
                     </div>
                 </div>

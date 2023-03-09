@@ -129,15 +129,18 @@ nav{
   height: 50px;
   align-items: center;
   display: flex;
+  justify-items: center;
+  flex: 1;
   vertical-align: center;
   align-content: center;
+  padding-bottom: 3px;
   backdrop-filter: blur(1.2px);
-  padding-bottom: 10px;
   position: fixed;
   position: fixed;
   z-index: 100;
   top: 0; /* required */
 }
+
 nav a{
   vertical-align: center;
   color: var(--title);
@@ -774,7 +777,7 @@ div nav-bar bottom
 .mobile-nav{
   width: 100%;
   height: 0px;
-  background-color: rgba(255, 255, 255, 0.55);
+  background-color: rgba(17, 21, 37, 0.55);
   position: fixed;
   bottom: 0px;
   transition: 0.4s ease;
@@ -784,10 +787,12 @@ div nav-bar bottom
 
 .mobile-nav-item4{
   text-align: center;
+  align-self: center;
   background-color: transparent;
   width: 25%;
   height: 100%;
   top: 50%;
+
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   padding-top:45px;
@@ -824,14 +829,21 @@ div nav-bar bottom
 
 @media screen and (max-width: 600px) {
 
+  .web-console{font-size: 20px}
+  .small{font-size: 20px}
+}
+
+span {
+  color: #eeeeee;
+}
+
+@media screen and (max-width: 900px) {
   .left-sider{visibility: hidden; transition: 0.3s ease; opacity: 0; height: 0px}
   .home-1{visibility: hidden; transition: 0.3s ease; opacity: 0; height: 0px}
   .full{height: 0px}
   .home-cour{height: 0px}
-
-}
-
-@media screen and (max-width: 900px) {
+  .web-console{font-size: 20px}
+  .small{font-size: 20px}
 
   .mobile-nav{
     width: 100%;
@@ -840,7 +852,7 @@ div nav-bar bottom
     visibility: visible;
     backdrop-filter: blur(1.3px);
     -webkit-backdrop-filter: blur(1.3px);
-    box-shadow: 4px 1px 9px rgba(110, 109, 109, 0.27);
+    box-shadow: 4px 1px 9px rgba(27, 29, 31, 0.61);
   }
 
   .recipes{
@@ -960,11 +972,11 @@ div nav-bar bottom
 
 .web-console{
   font-family: Consolas;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .small{
-  font-size: 33px;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 700px){

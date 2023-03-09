@@ -5,6 +5,7 @@ import styles from './App.css'
 import About from "./Pages/About";
 import Home from "./Pages/Home";
 import Nav from "./Navigators/Nav";
+import MobileNav from "./Navigators/MobileNav";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route element={<About/>} path='/about' exact/>
             </Routes>
       </div>
+      <MobileNav/>
     </div>
     </R>
   );
