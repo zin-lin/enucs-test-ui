@@ -46,7 +46,7 @@ export default function Home (){
                             ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
                         <button className='redx shRed' style={{width:'200px'}}>Join Us Now</button>
                         <br/><br/>
-                            <a to='https://'><button className='orangex shOrange' style={{width:'200px'}}>Join Napier</button></a>
+                            <button className='orangex shOrange' style={{width:'200px'}} >Join Napier</button>
                         </div>
                     </div>
                 </div>
