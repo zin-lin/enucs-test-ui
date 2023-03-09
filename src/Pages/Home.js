@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import styles from '../App.css'
 import code from '../imgs/code.jpg'
 import {Link} from "react-router-dom";
+import MobileHome from "../Widgets/MobileHome";
 
 export default function Home (){
 
@@ -41,22 +42,28 @@ export default function Home (){
                     </div>
                     <div className='full' style={{width:'60%', position:"absolute", minHeight:'50px', overflow:"auto", display:'flex', alignItems:'center'}} >
                         <div style={{margin:"auto", top:'auto'}}>
-                        <p className='enucs' >{'{'}ENU<span className='red'>CS</span>{'}'}</p>
-                        <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
-                            ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
-                        <button className='redx shRed' style={{width:'200px',padding:'10px'}}>Join Us Now</button>
-                        <br/><br/>
+                            <p className='enucs' >{'{'}ENU<span className='red'>CS</span>{'}'}</p>
+                            <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
+                                ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
+                            <button className='redx shRed' style={{width:'200px',padding:'10px'}}>Join Us Now</button>
+                            <br/><br/>
                             <button className='orangex shOrange' style={{width:'200px',padding:'10px'}} >Join Napier</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div></div>
 
-            <div style={{background:"#131F2E", height:'20px'}}>
+            <div style={{position:'relative'}}>
+                <MobileHome/>
 
             </div>
+            <div style={{zIndex:2, height:'200px', background:'#131F2E',  position:'relative'}}>
+
+            </div>
+
+
+
 
         </div>
     );
