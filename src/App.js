@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as R, Route, Routes } from 'react-router-dom'
+import styles from './App.css'
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import Nav from "./Navigators/Nav";
 
 function App() {
   return (
+    <R>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav/>
+      <div className='rom-app'>
+            <Routes>
+                <Route element={<Home/>} path='/' exact/>
+                <Route element={<About/>} path='/about' exact/>
+            </Routes>
+      </div>
     </div>
+    </R>
   );
 }
 
