@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import styles from '../App.css'
 import code from '../imgs/code.jpg'
+import {Link} from "react-router-dom";
 
 export default function Home (){
 
@@ -45,15 +46,13 @@ export default function Home (){
                             ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
                         <button className='redx shRed' style={{width:'200px'}}>Join Us Now</button>
                         <br/><br/>
-                        <button className='orangex shOrange' style={{width:'200px'}}>Join Napier</button>
+                            <a to='https://'><button className='orangex shOrange' style={{width:'200px'}}>Join Napier</button></a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            // mobile view
             <div></div>
-            // mobile view
 
             <div style={{background:"#131F2E", height:'20px'}}>
 

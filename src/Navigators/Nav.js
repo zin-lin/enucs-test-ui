@@ -25,6 +25,9 @@ export default function Nav () {
                 <Link to='/ok'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined">
                 search
                 </span></p></Link>
+                <Link to='/'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined red">
+                shopping_cart_checkout
+                </span></p></Link>
             </div>
         </nav>
     );
