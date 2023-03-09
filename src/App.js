@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as R, Route, Routes } from 'react-router-dom'
+import {HashRouter as R, Route, Routes } from 'react-router-dom'
 import styles from './App.css'
 import About from "./Pages/About";
 import Home from "./Pages/Home";
