@@ -2,14 +2,14 @@ import React from "react";
 import {useState, useEffect} from "react";
 import {Provider, useSelector} from "react-redux";
 import loginStore from "../redux/loginStore";
-import {useAppDispatch, useAppSelector} from "../redux/hook";
+import {useLoginSelector, useLoginDispatch, useAuthSelector} from "../redux/hook";
 import {toLogin, toRegister} from "../redux/loginState";
 
 function Renderer  (){
 
     let ctrl: string;
-    ctrl = useAppSelector(state => state.log.value);
-    const dispatch = useAppDispatch();
+    ctrl = useLoginSelector(state => state.log.value);
+    const dispatch = useLoginDispatch();
     return (
 
             <div style={{width:'100%', height:'100%', display:'flex', flex:1, position:'relative'}}>
@@ -47,29 +47,21 @@ function Renderer  (){
 }
 export default function Profile () {
 
-   /*
-   This bit has to do with talking to the BE Docker
-   auth should be a listener for authentication
-   as of for now let's call it false for
-   GLOBAL AUTH HERE IF AUTHED, setAuth (true)
+    /*
+    This bit has to do with talking to the BE Docker
+    auth should be a listener for authentication
+    as of for now let's call it false for
+    GLOBAL AUTH HERE IF AUTHED, setAuth (true)
     */
+    const authed = useAuthSelector(state => state.auth.value);
 
-   const [auth, setAuth] = useState(false);
-   const [sign, setSign] = useState("Sign In");
-
-   const changeSign = ()=>{
-           if (sign === "Sign In"){
-               setSign("Register");
-           }else{
-               setSign("Sign In");
-           }
-   }
-   return (
+    return (
+           !authed?
            (<div className='page'>
                <Provider store={loginStore}>
                    {<Renderer/>}
                </Provider>
-           </div>)
+           </div>):(<div></div>)
    )
 
 }
