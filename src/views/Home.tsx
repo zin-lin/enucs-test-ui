@@ -1,8 +1,7 @@
+import React from "react";
 import {useState, useEffect} from "react";
-import styles from '../App.css'
-import code from '../imgs/code.jpg'
 import {Link} from "react-router-dom";
-import MobileHome from "../Widgets/MobileHome";
+import MobileHome from "../components/MobileHome";
 
 export default function Home (){
 
@@ -42,7 +41,7 @@ export default function Home (){
                     </div>
                     <div className='full' style={{width:'60%', position:"absolute", minHeight:'50px', overflow:"auto", display:'flex', alignItems:'center'}} >
                         <div style={{margin:"auto", top:'auto'}}>
-                            <p className='enucs' >{'{'}ENU<span className='red'>CS</span>{'}'}</p>
+                            <p className='enucs' >{'{'}enu<span className='red'>cs</span>{'}'}</p>
                             <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
                                 ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
                             <button className='redx shRed' style={{width:'200px',padding:'10px'}}>Join Us Now</button>
@@ -56,15 +55,35 @@ export default function Home (){
 
             <div style={{position:'relative'}}>
                 <MobileHome/>
-
             </div>
-            <div style={{zIndex:2, height:'200px', background:'#131F2E',  position:'relative'}}>
-
+            <div style={{zIndex:5, height:'auto', background:'var(--primary)', marginTop:-2 ,position:'relative', padding:'30px'}}>
+                <div style={{flex:2, display:'flex',  height:'auto', width:'auto', justifyContent:"center", flexWrap:'wrap', order:2, flexDirection:'row'}}>
+                    <div style={{borderRadius:12,background:'#fff', height:'100%', padding:'20px', margin:'20px'}} className='wrap-text-white'>
+                        <div style={{display:'flex'}}>
+                            <div className='circle' style={{background:'grey'}}></div><div className='circle back-red'></div>
+                        </div>
+                        <p>"I'm sure there will continue to be exciting new products and major changes, but it looks as if the existing technology has a great deal of room to grow and prosper.
+                        "</p>
+                        <p><b>Jack Kilby</b></p>
+                    </div>
+                    <div style={{borderRadius:12,background:'#fff', height:'100%', padding:'20px', margin:'20px'}} className='wrap-text-white'>
+                        <div style={{display:'flex'}}>
+                            <div className='circle' style={{background:'grey'}}></div><div className='circle' style={{background:'orange'}}></div>
+                        </div>
+                        <p>"I think it's fair to say that personal computers have become the most empowering tool we've ever created. They're tools of creativity
+                        and they can be shaped by their users.</p>
+                        <p><b>Bill Gates</b></p>
+                    </div>
+                    <div style={{borderRadius:12,background:'#fff', height:'100%', padding:'20px', margin:'20px'}} className='wrap-text-white'>
+                        <div style={{display:'flex'}}>
+                            <div className='circle' style={{background:'grey'}}></div><div className='circle back-pink' ></div>
+                        </div>
+                        <p>"The idea behind digital computers may be explained by saying that these machines are intended to carry out any operations which
+                            could be done by a human computer</p>
+                        <p><b>Alan Turing</b></p>
+                    </div>
+                </div>
             </div>
-
-
-
-
         </div>
     );
 }

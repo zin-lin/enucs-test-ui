@@ -1,3 +1,4 @@
+import React from "react";
 import {Link} from "react-router-dom";
 
 const navSty = {
@@ -37,7 +38,7 @@ export default function MobileNav () {
             </div>
 
             <div className='mobile-nav-item4'>
-                <Link to='/'>
+                <Link to='/profile'>
                     <span className="material-symbols-outlined">
                     person
                     </span>
