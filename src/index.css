@@ -38,6 +38,24 @@ App{
   height: 100%;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  margin-right: 10px;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 202, 204, 0.79);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 15, 23, 0.58);
+
+}
+
 /* layout styles */
 nav{
   background:  var(--primary) ;
@@ -563,6 +581,57 @@ div nav-bar bottom
 }
 
 
+/*
+Universal widgets for my project
+ */
+
+.alertbox {
+  align-self: center;
+  vertical-align: center;
+  text-align: center;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 15;
+  margin:auto;
+  margin-top: 10%;
+  z-index: 1;
+  background-color: #fffcfc;
+  border-radius: 12px;
+  width: auto;
+  max-width: 290px;
+  transition: 0.5s ease;
+  box-shadow: 2px 3px 16px 5px rgba(79, 79, 79, 0.19);
+}
+.alert{
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  z-index: 2560;
+  position: fixed;
+  transition: 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+p.aTitle {
+  font-size: 18px
+}
+p.aText {
+  font-size: 13px;
+  color: rgba(103, 103, 103, 0.75);
+}
+
+.wrap-text-white{
+  transition: 0.4s ease;
+  width: 280px;
+  color: #a2a2a2;
+  minWidth:280px,
+}
+
 @media screen and (max-width: 800px)
 {
   .items{
@@ -754,7 +823,7 @@ div nav-bar bottom
 }
 
 .web-console{
-  font-family: Consolas;
+  font-family: "Consolas", sans-serif;
   font-size: 40px;
 }
 
@@ -801,73 +870,6 @@ div nav-bar bottom
   height:  100%;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  margin-right: 10px;
-}
-
-
-/* Handle */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(202, 202, 204, 0.79);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(11, 15, 23, 0.58);
-
-}
-
-/*
-Universal widgets for my project
- */
-
-.alertbox {
-  align-self: center;
-  vertical-align: center;
-  text-align: center;
-  height: auto;
-  padding: 10px;
-  padding-bottom: 15;
-  margin:auto;
-  margin-top: 10%;
-  z-index: 1;
-  background-color: #fffcfc;
-  border-radius: 12px;
-  width: auto;
-  max-width: 290px;
-  transition: 0.5s ease;
-  box-shadow: 2px 3px 16px 5px rgba(79, 79, 79, 0.19);
-}
-.alert{
-
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-content: center;
-  align-self: center;
-  align-items: center;
-  z-index: 2560;
-  position: fixed;
-  transition: 0.5s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-p.aTitle {
-  font-size: 18px
-}
-p.aText {
-  font-size: 13px;
-  color: rgba(103, 103, 103, 0.75);
-}
-
-.wrap-text-white{
-  transition: 0.4s ease;
-  width: 280px;
-  color: #a2a2a2;
-  minWidth:280px,
-}
 
 @media screen  and (max-width: 792px) {
   .wrap-text-white{
