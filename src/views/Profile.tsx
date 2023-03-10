@@ -27,14 +27,14 @@ function Renderer  (){
                             <div style={{display:'flex', alignItems:'center', marginLeft:26}}>
                                 <span style={{color:'#aaa', fontSize:19, marginRight:10}}  className="material-symbols-outlined">
                                      mail
-                                </span><p style={{color:'#aaa', fontSize:14}}>User Name or Email</p>
+                                </span><p style={{color:'#aaa', fontSize:14}}>Email</p>
                             </div>
                             <input placeholder='@email' className='noner'/>
                             <br/>
                             <div style={{display:'flex', alignItems:'center', marginLeft:26}}>
                                     <span style={{color:'#aaa', fontSize:19, marginRight:10}} className="material-symbols-outlined">
                                          password
-                                    </span> <p style={{color:'#aaa', fontSize:14}}>Password</p> <span><a style={{fontSize:13, color:'#aaa', marginLeft:30, fontStyle:'italic'}}>Forget Password</a></span>
+                                    </span> <p style={{color:'#aaa', fontSize:14}}>Password</p> <span><a style={{fontSize:13, color:'#aaa', marginLeft:30, textDecoration:'underline'}}>Forget Password</a></span>
                             </div>
                             <input placeholder='Ur Password' className='noner' type='password' />
                             <button className='redx shRed' style={{margin:20, width:170, paddingTop:8, paddingBottom:8}}>{ctrl}</button>

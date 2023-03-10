@@ -11,9 +11,7 @@ export default function Home (){
         setOpacity(1);
     })
 
-    return (
-
-        <div className='page'>
+    return (<div className='page'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" ></link>
             <div className='home-1'>
                 <div style={{width: '42%', left:0, display:'flex', zIndex:4,justifyContent:'center', alignItems:"center", overflow:'auto'}} className='left-sider'>
@@ -71,7 +69,7 @@ export default function Home (){
                             <div className='circle' style={{background:'grey'}}></div><div className='circle' style={{background:'orange'}}></div>
                         </div>
                         <p>"I think it's fair to say that personal computers have become the most empowering tool we've ever created. They're tools of creativity
-                        and they can be shaped by their users.</p>
+                        and they can be shaped by their users."</p>
                         <p><b>Bill Gates</b></p>
                     </div>
                     <div style={{borderRadius:12,background:'#fff', height:'100%', padding:'20px', margin:'20px'}} className='wrap-text-white'>
@@ -79,7 +77,7 @@ export default function Home (){
                             <div className='circle' style={{background:'grey'}}></div><div className='circle back-pink' ></div>
                         </div>
                         <p>"The idea behind digital computers may be explained by saying that these machines are intended to carry out any operations which
-                            could be done by a human computer</p>
+                            could be done by a human computer"</p>
                         <p><b>Alan Turing</b></p>
                     </div>
                 </div>
