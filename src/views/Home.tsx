@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import MobileHome from "../components/MobileHome";
-import { toRegister } from "../redux/authState";
+import {toProfile, toRegister} from "../redux/authState";
 import {useAuthDispatch} from "../redux/hook";
 
 export default function Home (){
@@ -49,6 +49,7 @@ export default function Home (){
                                 ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
                             <button className='redx shRed' style={{width:'200px',padding:'10px'}} onClick ={
                                 ()=>{ //onCLick
+                                    dispatch(toProfile()); //dispatch to profile
                                     dispatch(toRegister());
                                     navigate('/profile');
                                 }
