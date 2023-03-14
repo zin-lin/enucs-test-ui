@@ -13,6 +13,9 @@ const initialState: RegisterState = {
     selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'}
 }
 
+/**
+ * Reducers
+ */
 export const authSlice = createSlice({
     extraReducers: undefined, initialState: {value: false, text:'Sign In To Store', selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'}},
     name: "auth", reducers: {
@@ -40,7 +43,10 @@ export const authSlice = createSlice({
         toProfile: (state)=>{
             state.selected =  {v1: '#eee', v2: '#eee', v3: '#eee', v4: '#ce6565'}
         },
+        resetAllVs: (state)=>{
+            state.selected =  {v1: '#eee', v2: '#eee', v3: '#eee', v4: '#eee'}
+        }
     }
 });
-export const {Login, LogOut, toLogin, toRegister, toHome, toShop, toEvent, toProfile} = authSlice.actions;
+export const {Login, LogOut, toLogin, toRegister, toHome, toShop, toEvent, toProfile, resetAllVs} = authSlice.actions;
 export default authSlice.reducer;
