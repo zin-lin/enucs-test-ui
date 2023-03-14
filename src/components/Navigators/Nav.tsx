@@ -24,12 +24,18 @@ export default function Nav () {
                 <Link to='/about'><p style={{fontSize:16, margin:12 }}>Eve<span style={{color:"#FF5757"}}>nts</span></p></Link>
                 <Link to='/music'><p  style={{fontSize:16, margin:12 }}>About{' '}<span style={{color:"#FF5757"}}>Us</span></p></Link>
                 <Link to='/profile'><p style={{fontSize:16, margin:12 }}>Pro<span style={{color:"#FF5757"}}>file </span></p></Link>
-                <Link to='/ok'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined">
+                <Link to='/search'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined">
                 search
                 </span></p></Link>
                 <Link to='/'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined red">
                 shopping_cart_checkout
                 </span></p></Link>
+            </div>
+            <div className = "hider-reverse" style={{marginTop:'6px', right:0, position:'absolute' }}>
+                <Link to='/search'><p style={{fontSize:16, margin:12 }}><span className="material-symbols-outlined">
+                    search
+                    </span></p>
+                </Link>
             </div>
         </nav>
     );

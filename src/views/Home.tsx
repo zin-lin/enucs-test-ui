@@ -1,7 +1,9 @@
 import React from "react";
 import {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import MobileHome from "../components/MobileHome";
+import { toRegister } from "../redux/authState";
+import {useAuthDispatch} from "../redux/hook";
 
 export default function Home (){
 
@@ -10,6 +12,9 @@ export default function Home (){
     useEffect(()=>{
         setOpacity(1);
     })
+
+    const navigate = useNavigate();
+    const dispatch = useAuthDispatch();
 
     return (<div className='page'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" ></link>
@@ -42,7 +47,12 @@ export default function Home (){
                             <p className='enucs' >{'{'}enu<span className='red'>cs</span>{'}'}</p>
                             <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
                                 ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
-                            <button className='redx shRed' style={{width:'200px',padding:'10px'}}>Join Us Now</button>
+                            <button className='redx shRed' style={{width:'200px',padding:'10px'}} onClick ={
+                                ()=>{ //onCLick
+                                    dispatch(toRegister());
+                                    navigate('/profile');
+                                }
+                            }>Join Us Now</button>
                             <br/><br/>
                             <button className='orangex shOrange' style={{width:'200px',padding:'10px'}} >Join Napier</button>
                         </div>
@@ -51,7 +61,7 @@ export default function Home (){
             </div>
 
 
-            <div style={{position:'relative'}}>
+            <div style={{position:'relative', zIndex:6}}>
                 <MobileHome/>
             </div>
             <div style={{zIndex:5, height:'auto', background:'var(--primary)', marginTop:-2 ,position:'relative', padding:'30px'}}>

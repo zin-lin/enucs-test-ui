@@ -8,11 +8,12 @@ import MobileNav from "./components/Navigators/MobileNav";
 import Profile from "./views/Profile";
 import React from 'react';
 import {Provider} from "react-redux";
-import authStore from "./redux/authStore";
+import authStore from "./redux/store";
+import Search from "./views/Search";
+import loginStore from "./redux/stateStores/loginStore";
 
 function App() {
   return (
-    <Provider store={authStore}>
         <R>
             <div className="App">
               <Nav/>
@@ -21,12 +22,12 @@ function App() {
                         <Route element={<Home/>} path='/' />
                         <Route element={<About/>} path='/about' />
                         <Route element={<Profile/>} path='/profile' />
+                        <Route element={<Search/>} path='/search' />
                     </Routes>
               </div>
               <MobileNav/>
             </div>
         </R>
-    </Provider>
   );
 }
 
