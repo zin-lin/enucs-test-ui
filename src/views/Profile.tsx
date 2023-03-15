@@ -2,13 +2,14 @@ import React from "react";
 import {Provider, useSelector} from "react-redux";
 import loginStore from "../redux/stateStores/loginStore";
 import {useLoginSelector, useLoginDispatch, useAuthSelector, useAuthDispatch} from "../redux/hook";
-import {toLogin, toRegister} from "../redux/authState";
+import {toLogin, toProfile, toRegister} from "../redux/authState";
 
 function Renderer (){
 
     let ctrl: string;
     ctrl = useAuthSelector(state => state.auth.text);
     const dispatcher = useAuthDispatch();
+    dispatcher(toProfile());
     return (
 
             <div style={{width:'100%', height:'100%', display:'flex', flex:1, position:'relative'}}>

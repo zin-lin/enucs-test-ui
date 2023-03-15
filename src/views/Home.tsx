@@ -2,7 +2,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import MobileHome from "../components/MobileHome";
-import {toProfile, toRegister} from "../redux/authState";
+import {toHome, toProfile, toRegister} from "../redux/authState";
 import {useAuthDispatch} from "../redux/hook";
 
 export default function Home (){
@@ -15,6 +15,7 @@ export default function Home (){
 
     const navigate = useNavigate();
     const dispatch = useAuthDispatch();
+    dispatch(toHome());
 
     return (<div className='page'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" ></link>

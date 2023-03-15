@@ -1,10 +1,15 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import logo from "../assets/logo.png";
+import {useDispatch} from "react-redux";
+import {useAuthDispatch} from "../redux/hook";
+import {resetAllVs} from "../redux/authState";
 
 export default function Search() {
 
     const [opacity, setOpacity] =useState(0);
+    const dispatch = useAuthDispatch();
+    dispatch(resetAllVs());
 
     useEffect(()=>{
         setOpacity(1);
