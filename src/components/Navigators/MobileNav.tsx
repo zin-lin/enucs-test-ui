@@ -1,7 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useAuthDispatch, useAuthSelector} from "../../redux/hook";
-import {useDispatch} from "react-redux";
 import {toHome, toEvent, toShop, toProfile} from "../../redux/authState";
 
 const navSty = {
@@ -15,35 +14,36 @@ const napierColor = {
 export default function MobileNav () {
     const selected = useAuthSelector(state => state.auth.selected);
     const dispatch = useAuthDispatch();
+    const navigate = useNavigate();
     return (
         <div className='mobile-nav'>
             <div style={{display: 'flex', marginTop: '15px'}}>
-            <div className='mobile-nav-item4' onClick={()=>dispatch(toHome())}>
-                <Link to='/'>
+            <div className='mobile-nav-item4' >
+                <Link to='/' onClick={()=>dispatch(toHome())}>
                     <span className="material-symbols-outlined" style={{color: selected.v1}}>
                         home
                     </span>
                 </Link>
             </div>
 
-            <div className='mobile-nav-item4' onClick={()=>dispatch(toEvent())}>
-                <Link to='/'>
+            <div className='mobile-nav-item4' >
+                <Link to='/' onClick={()=>dispatch(toEvent())}>
                     <span className="material-symbols-outlined" style={{color: selected.v2}}>
                     event
                     </span>
                 </Link>
             </div>
 
-            <div className='mobile-nav-item4' onClick={()=>dispatch(toShop())}>
-                <Link to='/' >
+            <div className='mobile-nav-item4'>
+                <Link to='/' onClick={()=>dispatch(toShop())}>
                     <span className="material-symbols-outlined" style={{color: selected.v3}}>
                     shopping_cart_checkout
                     </span>
                 </Link>
             </div>
 
-            <div className='mobile-nav-item4' onClick={()=>dispatch(toProfile())}>
-                <Link to='/profile'>
+            <div className='mobile-nav-item4' >
+                <Link to='/profile'  onClick={()=>dispatch(toProfile())}>
                     <span className="material-symbols-outlined" style={{color: selected.v4}}>
                     person
                     </span>
