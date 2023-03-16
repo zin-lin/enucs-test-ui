@@ -8,6 +8,7 @@ html{
   user-select: none;
   font-family: lato, sans-serif;
   color: #eee;
+  initial-scale:1;
   transition: 0.7s ease;
 }
 
@@ -420,7 +421,7 @@ button.redx {
   background-color: #cb3535;
 }
 .shRed {
-  box-shadow: 1px 1px 10px 1px rgba(222, 35, 35, 0.47);
+  box-shadow: 1px 1px 10px 1px rgba(246, 86, 86, 0.64);
 }
 
 /*
