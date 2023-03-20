@@ -104,12 +104,19 @@ input{
   box-shadow: none !important;
   border: none;
   padding: 20px;
-
   transition: 0.4s ease;
   border-bottom: 1px solid #949494;
   -webkit-box-shadow: none !important;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 30px rgb(240,240,240)  inset !important;
+}
 
 button {
   background-color: transparent;

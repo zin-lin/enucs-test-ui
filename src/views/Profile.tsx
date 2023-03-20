@@ -16,7 +16,7 @@ function Renderer (){
                 <div className='full-bg-img'>
                 </div>
                 <div className='full-bg-img-mask'>
-                    <div style={{background:'rgba(245,245,245,0.93)', height:'80%', width:'80%', maxHeight:370, maxWidth:500, minWidth:300,
+                    <div style={{background:'rgb(240,240,240)', height:'80%', width:'80%', maxHeight:370, maxWidth:500, minWidth:300,
                         borderRadius:30, boxShadow:'2px 2px 18px 15px 0xff333333', overflow:'auto'}} className="shadow-container">
                         <div style={{padding:'20px', textAlign:'center', justifyContent:'center'}}>
                             <div style={{display:'flex'}}>
