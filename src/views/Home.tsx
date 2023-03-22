@@ -48,6 +48,7 @@ export default function Home (){
                             <p className='enucs' >{'{'}enu<span className='red'>cs</span>{'}'}</p>
                             <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
                                 ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
+                            <br/>
                             <button className='redx shRed' style={{width:'200px',padding:'10px'}} onClick ={
                                 ()=>{ //onCLick
                                     dispatch(toProfile()); //dispatch to profile
