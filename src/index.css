@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html{
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -6,7 +8,7 @@ html{
   -o-user-select: none;
   background: #071322;
   user-select: none;
-  font-family: lato, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #eee;
   initial-scale:1;
   transition: 0.7s ease;
@@ -17,7 +19,7 @@ html{
 body {
   background: #071322;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "Montserrat", BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -96,7 +98,7 @@ nav .sidenav-trigger{
 }
 
 input{
-  font-family: lato, sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 80%;
   background: transparent;
   mask-border-mode: unset;
@@ -120,7 +122,7 @@ input:-webkit-autofill:active{
 
 button {
   background-color: transparent;
-  font-family: lato , sans-serif;
+  font-family: "Montserrat" , sans-serif;
   font-size: 16px;
   padding-top:10px;
   padding-bottom: 10px;
@@ -239,7 +241,7 @@ ROM SPECIAL
 
 
 a:link{
-  font-family: lato, sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-underline: none;
   text-decoration: none;
 }
@@ -375,7 +377,7 @@ Green X
 button.greenx {
   font-size: 14px;
   color: #ffffff;
-  font-family: "Lato Light", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #69e8a4;
 }
 
@@ -395,7 +397,7 @@ Blue X
  */
 button.bluex {
   font-size: 14px;
-  font-family: "Lato Light", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
   background-color: #4680ff;
 }
@@ -416,7 +418,7 @@ Red X
 
 button.redx {
   color: #ffffff;
-  font-family: "Lato Light", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   background-color: #FF5757;
 }
@@ -437,7 +439,7 @@ Orange X
 
 button.orangex {
   color: #ffffff;
-  font-family: "Lato Light", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   background-color: #ff8b4f;
 }
@@ -458,7 +460,7 @@ Theme X
  */
 
 button.themex {
-  font-family: "Lato Light", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #ffffff;
   background-color: #1c4254;
