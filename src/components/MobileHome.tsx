@@ -13,14 +13,19 @@ export default function MobileHome (){
 
                 </div>
 
-                <div style={{ position:'absolute', zIndex:2}}>
+                <div style={{ position:'absolute', zIndex:2, width:'100%'}}>
                     <div style={{margin:"auto", top:'auto', textAlign:'center', flex:1 , display:"flex", justifyItems:"center", alignItems:'center',
-                        alignContent:'center'
+                        alignContent:'center', width:'100%', justifyContent:'center'
                     }}>
-                        <div style={{height:'100%', overflow:'auto'}}>
+                        <div style={{height:'100%', overflow:'auto', width:'100%'}}>
                             <p className='enucs' style={{fontSize:29, marginBottom:20}} >{'{'}enu<span className='red'>cs</span>{'}'}</p>
-                            <p className='text-shadow' style={{width:'50%', margin:"auto",  fontWeight:'bold'}}>
-                                ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
+                            <div style={{border:'3px', borderStyle:'solid', marginLeft:'22%', padding:'20px', marginRight:'22%',width:'auto',
+                              borderRadius:'0px 52px 0px 0px'
+                            }}>
+                            <p className='text-shadow' style={{width:'70%', margin:"auto",  fontWeight:'normal', border:'2px'}}>
+                                <b>Greetings Dear Devs!</b> Welcome to ENUCS</p>
+                            </div>
+                                <br/>
                             <button className='redx shRed' style={{width:'200px',padding:'10px', margin:'10px', zIndex:15}}
                                     onClick={() => {
                                         dispatch(toProfile()); //dispatch to profile

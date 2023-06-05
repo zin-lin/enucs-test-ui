@@ -667,7 +667,7 @@ p.aText {
 
 .mobile-view-img{
   background-image: url("assets/code.jpg");
-  filter: blur(1.6px);
+  filter: blur(1.9px);
   box-shadow: 1px 1px 10px 1px rgba(8, 14, 14, 0.34);
   background-size: cover ;
   height: 0px;

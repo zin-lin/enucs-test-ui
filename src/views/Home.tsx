@@ -20,7 +20,7 @@ export default function Home (){
     return (<div className='page'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" ></link>
             <div className='home-1'>
-                <div style={{width: '42%', left:0, display:'flex', zIndex:4,justifyContent:'center', alignItems:"center", overflow:'auto'}} className='left-sider'>
+                <div style={{width: '42%', background:'rgba(11, 17, 45, 0.7)', left:0, display:'flex', zIndex:15,justifyContent:'center', alignItems:"center", overflow:'auto'}} className='left-sider'>
                     <div id='console' style={{transition:'0.8s ease', opacity:opacity}}>
                         <div style={{  display:"flex", alignItems:'center', justifyContent:'center'}}>
                             <div style={{margin:'20px', display:'flex'}}>
@@ -39,15 +39,21 @@ export default function Home (){
                     </div>
                 </div>
 
-                <div style={{textAlign:"center",transition:'1.2s ease', opacity:opacity, zIndex:3}} className='left-sider'>
+                <div style={{textAlign:"center",transition:'1.2s ease', opacity:opacity, zIndex:5}} className='left-sider'>
                     <div className='home-cour'>
 
                     </div>
                     <div className='full' style={{width:'60%', position:"absolute", minHeight:'50px', overflow:"auto", display:'flex', alignItems:'center'}} >
                         <div style={{margin:"auto", top:'auto'}}>
                             <p className='enucs' >{'{'}enu<span className='red'>cs</span>{'}'}</p>
-                            <p className='text-shadow' style={{width:'60%', margin:"auto"}}>
+                            <div style={{border:'3px', borderStyle:'solid', marginLeft:'22%', padding:'20px', marginRight:'22%',width:'auto',
+                                borderRadius:'0px 82px 0px 0px'
+                            }}>
+                            <p className='text-shadow hider' style={{width:'60%', margin:"auto"}}>
                                 ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
+                            </div>
+                            <br/>
+                            <br/>
                             <br/>
                             <button className='redx shRed' style={{width:'200px',padding:'10px'}} onClick ={
                                 ()=>{ //onCLick
@@ -67,7 +73,7 @@ export default function Home (){
             <div style={{position:'relative', zIndex:6}}>
                 <MobileHome/>
             </div>
-            <div style={{zIndex:5, height:'auto', background:'var(--primary)', marginTop:-2 ,position:'relative', padding:'30px'}}>
+            <div style={{zIndex:9, height:'auto', background:'var(--primary)', marginTop:-2 ,position:'relative', padding:'30px'}}>
                 <div style={{flex:2, display:'flex',  height:'auto', width:'auto', justifyContent:"center", flexWrap:'wrap', order:2, flexDirection:'row'}}>
                     <div style={{borderRadius:12,background:'#fff', height:'100%', padding:'20px', margin:'20px'}} className='wrap-text-white'>
                         <div style={{display:'flex'}}>
