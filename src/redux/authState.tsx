@@ -3,21 +3,25 @@ interface RegisterState {
     value: boolean // initial State
     ,
     text: string // initial State
+    ,
     selected : {v1: string, v2: string, v3:string, v4:string } // initial State
+    ,
+    enucs: string
 }
 
 // Define the initial state using that type
 const initialState: RegisterState = {
     value: false,
     text: 'Sign in to Store',
-    selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'}
+    selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'},
+    enucs: ""
 }
 
 /**
  * Reducers
  */
 export const authSlice = createSlice({
-    extraReducers: undefined, initialState: {value: false, text:'Sign In To Store', selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'}},
+    extraReducers: undefined, initialState: {value: false, text:'Sign In To Store', selected: {v1: '#ce6565', v2: '#eee', v3: '#eee', v4: '#eee'}, enucs:""},
     name: "auth", reducers: {
         LogOut:(state)=> {
             state.value =false;
@@ -45,6 +49,9 @@ export const authSlice = createSlice({
         },
         resetAllVs: (state)=>{
             state.selected =  {v1: '#eee', v2: '#eee', v3: '#eee', v4: '#eee'}
+        },
+        addText: (state, adder )=>{
+            state.enucs += adder;
         }
     }
 });

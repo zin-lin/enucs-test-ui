@@ -1,21 +1,47 @@
-import React from "react";
+import React, {useRef} from "react";
 import {useState, useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import MobileHome from "../components/MobileHome";
 import {toHome, toProfile, toRegister} from "../redux/authState";
-import {useAuthDispatch} from "../redux/hook";
+import {useAuthDispatch, useAuthSelector} from "../redux/hook";
 
 export default function Home (){
 
     const [opacity, setOpacity] =useState(0);
-
-    useEffect(()=>{
-        setOpacity(1);
-    })
+    const [text, setText]= useState("");
+    const ref = useRef<string>();
+    ref.current = text;
 
     const navigate = useNavigate();
     const dispatch = useAuthDispatch();
     dispatch(toHome());
+
+    // adding the text adder
+    let enucs: string;
+    enucs = useAuthSelector(state => state.auth.enucs);
+
+    useEffect(() => {
+        setOpacity(1);
+        const fullText = "ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below."; // The complete text to append
+        let currentIndex = 0;
+        const appendText = () => {
+            if (currentIndex < fullText.length) {
+
+                let xox = ref.current + fullText[currentIndex];
+                setText(xox);
+                currentIndex ++;
+            }
+        };
+
+        const inId = setInterval(appendText, 10); // Append text every 100 milliseconds
+
+        return () => {
+            clearInterval(inId); // Cleanup: Clear the interval when component unmounts
+        };
+
+        // Call the appendText function
+        appendText();
+    }, []);
 
     return (<div className='page'>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" ></link>
@@ -47,10 +73,11 @@ export default function Home (){
                         <div style={{margin:"auto", top:'auto'}}>
                             <p className='enucs' >{'{'}enu<span className='red'>cs</span>{'}'}</p>
                             <div style={{border:'3px', borderStyle:'solid', marginLeft:'22%', padding:'20px', marginRight:'22%',width:'auto',
-                                borderRadius:'0px 82px 0px 0px'
+                                borderRadius:'0px 82px 0px 0px',  transition:'0.4s ease'
                             }}>
-                            <p className='text-shadow hider' style={{width:'60%', margin:"auto"}}>
-                                ENUCS is the leading society hosting contributors from all around the world. Join us explore the world of tomorrow by clicking the button below.</p><br/>
+                            <p className='text-shadow hider' style={{width:'60%', margin:"auto", transition:'0.4s ease '}}>
+                                {text}
+                            </p><br/>
                             </div>
                             <br/>
                             <br/>
@@ -101,6 +128,12 @@ export default function Home (){
                     </div>
                 </div>
             </div>
+
         </div>
+
     );
 }
+function addText(arg0: string): any {
+    throw new Error("Function not implemented.");
+}
+
